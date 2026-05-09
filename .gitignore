@@ -51,8 +51,7 @@ logs/
 *.sqlite
 *.sqlite3
 
-# Submodules (tracked separately)
-submodules/
+# Submodules are tracked as git submodules
 
 # Temporary files
 tmp/

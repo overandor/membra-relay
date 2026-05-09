@@ -100,3 +100,9 @@
 [submodule "submodules/38"]
 	path = submodules/38
 	url = https://github.com/overandor/38.git
+[submodule "submodules/Couchify"]
+	path = submodules/Couchify
+	url = https://github.com/overandor/Couchify.git
+[submodule "submodules/DockOS"]
+	path = submodules/DockOS
+	url = https://github.com/overandor/DockOS.git

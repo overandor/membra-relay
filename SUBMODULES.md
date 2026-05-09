@@ -44,6 +44,8 @@ These repos contain various components and experiments from earlier MEMBRA and l
 - **38** - CLI tools
 
 ### Named Repos
+- **Couchify** - "Dock into private space — by the minute." Core couch-sharing platform with frontend and backend
+- **DockOS** - "Real-time operating system for allocating physical space as programmable, minute-level units" — foundational platform for space allocation
 - **-google-voice-orders** - Voice-based order processing integration
 
 ## Empty/Placeholder Repos
