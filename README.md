@@ -133,3 +133,4 @@ This repo combines and references earlier work from GitHub submodules. See `/sub
 
 - [MEMBRA Master Summary](docs/MEMBRA_MASTER_SUMMARY.md) — Complete overview of MEMBRA as a chat-first, LLM-operated local sharing marketplace
 - [Pricing & Payment Splits](docs/pricing.md) — Distance-based pricing, surcharges, and payment distribution logic
+- [Submodule Components](docs/SUBMODULE_COMPONENTS.md) — Which parts from each submodule can be used for MEMBRA
