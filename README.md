@@ -128,3 +128,8 @@ MEMBRA combines local inventory, Hero Houses, Alpha Hubs, and Relay agents into 
 ## Combined Repositories
 
 This repo combines and references earlier work from GitHub submodules. See `/submodules/` for linked projects.
+
+## Documentation
+
+- [MEMBRA Master Summary](docs/MEMBRA_MASTER_SUMMARY.md) — Complete overview of MEMBRA as a chat-first, LLM-operated local sharing marketplace
+- [Pricing & Payment Splits](docs/pricing.md) — Distance-based pricing, surcharges, and payment distribution logic
