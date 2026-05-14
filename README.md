@@ -1,72 +1,57 @@
 # MEMBRA Relay
 
-MEMBRA Relay turns Hero Houses and local agents into flexible micro-fulfillment and delivery capacity for neighborhood commerce.
+**MEMBRA Relay is the local fulfillment and movement expansion module for MEMBRA Labs and the MEMBRA Proof Network.**
 
-## Concept
+It turns Hero Houses, Alpha Hubs, and local agents into proof-backed micro-fulfillment, storage, handoff, and delivery capacity.
 
-MEMBRA aggregates three things at once:
+## Company Context
+
+- Company: **MEMBRA Labs**
+- Flagship product: **MEMBRA Proof Network**
+- Module: **MEMBRA Relay**
+- Category: local fulfillment, storage, handoff, delivery proof, route attribution
+
+## One-Line Thesis
+
+Store locally. Move locally. Fulfill locally. Prove every handoff.
+
+## Product Role
+
+MEMBRA Relay is phase-two expansion after the first Membra Ads / QR proof wedge.
+
+It supports:
+
+- local delivery
+- meet-halfway handoffs
+- returns/drop-offs
+- hub transfers
+- errand relay
+- batch routes
+- storage-to-delivery flows
+- route proof and custody evidence
+
+## Core Concept
+
+MEMBRA aggregates three physical capacities:
 
 1. **Inventory** — what people already own or stock locally
-2. **Storage** — where goods can sit temporarily  
+2. **Storage** — where goods can sit temporarily
 3. **Movement** — who can carry items from one node to another
 
-Instead of competing directly with DoorDash or GoPuff, MEMBRA becomes the overflow, micro-storage, local handoff, and long-tail fulfillment layer.
+Instead of competing directly with last-mile networks, MEMBRA Relay can become overflow micro-storage, local handoff, proof-route, and long-tail fulfillment infrastructure.
 
-## Key Product Line
+## Relay Workflow
 
-**Store locally. Move locally. Fulfill locally.**
+1. User or operator needs an item moved.
+2. MEMBRA checks inventory, storage, and route options.
+3. Hero can self-handoff, meet halfway, or request Relay.
+4. Relay agent accepts route.
+5. Item moves from Hero House, Alpha Hub, store, or user.
+6. Proof is captured at pickup and dropoff.
+7. Payment eligibility is split across owner, hub, courier, and MEMBRA.
+8. KPI and ProofBook records are generated.
 
-## Workflow
-
-User needs item
-→ MEMBRA finds local inventory
-→ MEMBRA checks pickup/delivery options
-→ Hero can self-handoff, meet halfway, or request Relay
-→ Relay agent accepts route
-→ item moves from Hero House / Alpha Hub / store / user
-→ proof is captured
-→ payment splits between owner, hub, courier, and MEMBRA
-
-## Product Modes
-
-- **Instant Local Delivery** — bring an item from a nearby Hero to a user
-- **Meet Halfway** — both parties move less, lowering cost
-- **Return Run** — agents handle returns/drop-offs
-- **Hub Transfer** — move inventory between Hero Houses and Alpha Hubs
-- **Errand Relay** — simple compliant errands
-- **Batch Route** — bundle several low-value deliveries into one route
-- **Storage-to-Delivery** — Alpha Hub holds item until a Relay agent delivers
-- **On-Demand Courier** — host needs something brought across town
-
-## Pricing
-
-- Pickup only: $0
-- Meet halfway: $2–$5
-- Under 0.5 mile delivery: $4–$7
-- 0.5–2 miles: $7–$12
-- 2–5 miles: $12–$25
-- Cross-city: quote required
-- Heavy/bulky: surcharge
-- Fragile/high-value: deposit or insurance required
-
-## Payment Split Example
-
-For a local delivery:
-- User pays: $18
-- Inventory Hero: $7
-- Relay Agent: $6
-- Alpha Hub: $2
-- User cashback: $1
-- MEMBRA fee: $2
-
-For cross-city:
-- Sender pays: $24
-- Relay Agent: $17
-- MEMBRA fee: $4
-- Insurance/proof reserve: $1
-- Referral/Hub fee: $2
-
-## Relay Object Structure
+## Relay Object
 
 ```json
 {
@@ -85,52 +70,33 @@ For cross-city:
 }
 ```
 
-## AI Dispatch Role
+## Integration Points
 
-MEMBRA AI doesn't just match inventory — it chooses the fulfillment path:
+| Repo | Relationship |
+|---|---|
+| `overandor/membra` | company hub, doctrine, KPI runtime |
+| `overandor/Membra_ads` | campaigns and local physical media assets that may need kit movement |
+| `overandor/membra-qr-gateway` | dashboard view for route proof and local fulfillment activity |
+| `overandor/Membra_wallet` | reward eligibility and payout state boundary |
+| `overandor/Membra_proofbook` | pickup/dropoff proof records and custody hashes |
+| `overandor/Membra_kpi` | relay performance, route cost, proof approval, payout reporting |
 
-- Can the buyer pick it up?
-- Can the Hero meet halfway?
-- Is there an Alpha Hub nearby?
-- Is there a Relay agent already moving that direction?
-- Can this be batched with other deliveries?
-- Is the item restricted, fragile, perishable, or high value?
-- Does this need proof, deposit, insurance, or rejection?
+## Safety and Compliance Rules
 
-## System Stack
+- no restricted goods without policy review
+- no unverified courier payout eligibility
+- no route completion without proof event
+- no hidden custody chain
+- fragile/high-value items require deposit, insurance, or rejection
+- perishable, regulated, illegal, or unsafe categories must be blocked or reviewed
+- no guaranteed courier earnings
 
-- **Ask MEMBRA** — user asks for need
-- **MEMBRA Inventory** — detects supply
-- **MEMBRA Marketplace** — creates listing
-- **MEMBRA House** — local node
-- **MEMBRA Alpha Hub** — storage/fulfillment node
-- **MEMBRA Relay** — delivery/transfer layer
-- **MEMBRA Pay** — payment split
-- **MEMBRA Trust** — proof, risk, reputation
-- **MEMBRA Supply** — predicts what to stock
+## Productization Priority
 
-## Partnership Angle
+This is not the first resale wedge. The first wedge is Membra Ads / QR proof media.
 
-MEMBRA can approach larger delivery or quick-commerce companies as a local overflow inventory and micro-fulfillment partner.
+Relay should be positioned as expansion value after the proof-commerce dashboard is live.
 
-**To DoorDash-like partners:**
-"MEMBRA gives you distributed neighborhood inventory, pickup nodes, local storage, and low-friction demand signals. Your couriers can fulfill MEMBRA orders during idle time, and MEMBRA Heroes can create new hyperlocal order volume."
+## Current Stage
 
-**To GoPuff-like partners:**
-"MEMBRA extends micro-fulfillment beyond warehouses by turning trusted homes into light Alpha Hubs for long-tail inventory, returns, local storage, and neighborhood replenishment."
-
-## Investor Pitch
-
-MEMBRA combines local inventory, Hero Houses, Alpha Hubs, and Relay agents into a distributed fulfillment network where AI decides whether an item should be picked up, delivered, stored, transferred, batched, returned, or sold locally.
-
-**AI-operated neighborhood commerce infrastructure.**
-
-## Combined Repositories
-
-This repo combines and references earlier work from GitHub submodules. See `/submodules/` for linked projects.
-
-## Documentation
-
-- [MEMBRA Master Summary](docs/MEMBRA_MASTER_SUMMARY.md) — Complete overview of MEMBRA as a chat-first, LLM-operated local sharing marketplace
-- [Pricing & Payment Splits](docs/pricing.md) — Distance-based pricing, surcharges, and payment distribution logic
-- [Submodule Components](docs/SUBMODULE_COMPONENTS.md) — Which parts from each submodule can be used for MEMBRA
+Product doctrine and module architecture. Suitable for buyer narrative and phase-two roadmap; not yet production fulfillment software.
